@@ -55,7 +55,7 @@ class BaseRepository implements BaseRepositoryInterface
         try {
             return $this->getQuery()->create($data);
         } catch (\Exception $exception){
-            return ResponseAlias::error($exception->getCode(), $exception->getMessage());
+            return Response::error($exception->getCode(), $exception->getMessage());
         }
     }
 
